@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    <title>타코야끼 | terminal 새창 열 때 동작 등록 </title>
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <!-- fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,600,700" rel="stylesheet">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/style/doc.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    
+
+  </head>
+  <body>
+
+   <script>window.__INITIAL_STATE__ = {"page":{"title":"terminal 새창 열 때 동작 등록","path":"posts/terminal-bashrc.html"},"data":{"navigation":{"logo":{"text":"Hexo Doc Theme","type":"link","path":"index.html"},"main":[{"text":"Overview","type":"link","path":"index.html"},{"text":"Posts","type":"link","path":"posts/introduction.html","children":[{"text":".bash_profile 사용","type":"link","path":"posts/terminal-bashrc.html"}]},{"text":"Template","type":"label"},{"text":"UI","type":"link","path":"template/ui.html"},{"text":"To HTML","type":"link","path":"template/to-html.html"},{"text":"About","type":"label"},{"text":"github","type":"link","path":"https://ohen.github.io"}]}},"config":{"timezone":"Asia/Seoul","root":"/","time_format":"HH:mm:ss","theme":"../node_modules/hexo-theme-doc","theme_config":{"swagger_ui":{"version":2,"permalinks":true,"api_explorer":true,"download":"Download specification","show_extensions":false,"deep_linking":true,"display_operation_id":false,"doc_expansion":"none"},"search":{"skip":false,"background":false,"route":"/lunr.json"},"favicon":"images/favicon.ico"}}}</script>
+
+    <div id="react-navigation-root"><div class="doc-navigation" data-reactroot><nav class="doc-navbar"><a href="/index.html" class="doc-navbar__logo"><img src="/images/logo.png" class="doc-navbar__logo__img"><span class="doc-navbar__logo__text">Hexo Doc Theme</span></a><i class="dc-icon dc-icon--close dc-icon--interactive doc-sidebar-close doc-navbar__sidebar-close doc-navbar__sidebar-close--desktop"></i><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-navbar__sidebar-toggle"></i></nav><nav class="doc-sidebar"><div class="doc-sidebar__vertical-menu"><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-sidebar-toggle--primary doc-sidebar__vertical-menu__item"></i><i class="dc-icon dc-icon--search dc-icon--interactive doc-sidebar__vertical-menu__item doc-sidebar__vertical-menu__item--primary"></i></div><div class="doc-sidebar-content"><div class="doc-sidebar__search-form"></div><ul class="doc-sidebar-list"></ul></div></nav></div></div>
+    <div class="doc-content">
+  <div class="dc-page">
+    <div class="dc-card">
+      <div id="react-search-results-root"></div>
+      <div id="page-content" class="doc-formatting">
+        <h1 id="terminal-새창-열-때-동작-등록"><a href="#terminal-새창-열-때-동작-등록" class="headerlink" title="terminal 새창 열 때 동작 등록"></a>terminal 새창 열 때 동작 등록</h1><ul>
+<li>terminal 새창을 열 때 특정 동작을 등록 할 수 있다. </li>
+<li>env와 같은 값을 설정 할 수 있다. </li>
+<li>이외의 bash script를 실행 할 수 있도록 할 수 있다. </li>
+<li>user에 따라 커스터 마이징 해서 사용 할 수 있다.</li>
+</ul>
+<h1 id="How-to"><a href="#How-to" class="headerlink" title="How to"></a>How to</h1><h2 id="step-1"><a href="#step-1" class="headerlink" title="step 1"></a>step 1</h2><p><code>.bash_profile</code>가 존재 하지 않을 경우, 만들어 준다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<h2 id="step-2"><a href="#step-2" class="headerlink" title="step 2"></a>step 2</h2><p><code>bash_profile</code>에 원하는 command를 입력해준다.</p>
+<h2 id="step-3"><a href="#step-3" class="headerlink" title="step 3"></a>step 3</h2><p>terminal 열기 또는 source .bash_profile를 통하여 테스트 해본다.</p>
+<h1 id="Test-View"><a href="#Test-View" class="headerlink" title="Test View"></a>Test View</h1><p><img src="../images/posts/terminal-bashrc/image1.gif" alt="View"></p>
+<h1 id="Add-information"><a href="#Add-information" class="headerlink" title="Add information"></a>Add information</h1><p><code>.bashrc</code> 이외에 <code>.bash_profile</code>, <code>profile</code>, <code>/etc/bashrc</code> 등이 추가로 있다. 해당 파일의 기본 설정 호출 순서는 다음과 같다.</p>
+<ol>
+<li>/etc/profile → /etc/profile.d/test.sh</li>
+<li>~/.bash_profile → ~/.bashrc → /etc/bashrc</li>
+</ol>
+
+        <div id="react-support-footer-root"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+    
+
+    <!-- js vendors -->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.0/lunr.min.js"></script>
+
+    <!-- js source  -->
+    <script src="/script/doc.js"></script>
+
+    
+
+  </body>
+</html>
