@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    <title>타코야끼 | oh-my-zsh 설치 및 테마 변경 </title>
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <!-- fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,600,700" rel="stylesheet">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/style/doc.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    
+
+  </head>
+  <body>
+
+   <script>window.__INITIAL_STATE__ = {"page":{"title":"oh-my-zsh 설치 및 테마 변경","path":"posts/use-zsh.html"},"data":{"navigation":{"logo":{"text":"Hexo Doc Theme","type":"link","path":"index.html"},"main":[{"text":"Overview","type":"link","path":"index.html"},{"text":"Posts","type":"link","path":"posts/introduction.html","children":[{"text":".bash_profile 사용한 bash 설정 하기","type":"link","path":"posts/terminal-bashrc.html"},{"text":"zsh & oh-my-zsh 설치 및 테마 변경 하기","type":"link","path":"posts/use-zsh.html"}]},{"text":"Template","type":"label"},{"text":"UI","type":"link","path":"template/ui.html"},{"text":"To HTML","type":"link","path":"template/to-html.html"},{"text":"About","type":"label"},{"text":"github","type":"link","path":"https://ohen.github.io"}]}},"config":{"timezone":"Asia/Seoul","root":"/","time_format":"HH:mm:ss","theme":"../node_modules/hexo-theme-doc","theme_config":{"swagger_ui":{"version":2,"permalinks":true,"api_explorer":true,"download":"Download specification","show_extensions":false,"deep_linking":true,"display_operation_id":false,"doc_expansion":"none"},"search":{"skip":false,"background":false,"route":"/lunr.json"},"favicon":"images/favicon.ico"}}}</script>
+
+    <div id="react-navigation-root"><div class="doc-navigation" data-reactroot><nav class="doc-navbar"><a href="/index.html" class="doc-navbar__logo"><img src="/images/logo.png" class="doc-navbar__logo__img"><span class="doc-navbar__logo__text">Hexo Doc Theme</span></a><i class="dc-icon dc-icon--close dc-icon--interactive doc-sidebar-close doc-navbar__sidebar-close doc-navbar__sidebar-close--desktop"></i><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-navbar__sidebar-toggle"></i></nav><nav class="doc-sidebar"><div class="doc-sidebar__vertical-menu"><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-sidebar-toggle--primary doc-sidebar__vertical-menu__item"></i><i class="dc-icon dc-icon--search dc-icon--interactive doc-sidebar__vertical-menu__item doc-sidebar__vertical-menu__item--primary"></i></div><div class="doc-sidebar-content"><div class="doc-sidebar__search-form"></div><ul class="doc-sidebar-list"></ul></div></nav></div></div>
+    <div class="doc-content">
+  <div class="dc-page">
+    <div class="dc-card">
+      <div id="react-search-results-root"></div>
+      <div id="page-content" class="doc-formatting">
+        <h1 id="oh-my-zsh-설치-및-테마-변경"><a href="#oh-my-zsh-설치-및-테마-변경" class="headerlink" title="oh-my-zsh 설치 및 테마 변경"></a>oh-my-zsh 설치 및 테마 변경</h1><p>bash를 아름답게 사용할 수 있도록 도와 주는 <code>oh-my-zsh</code> 설치 및 설정 가이드</p>
+<h1 id="zsh-와-oh-my-zsh-설치"><a href="#zsh-와-oh-my-zsh-설치" class="headerlink" title="zsh 와 oh-my-zsh 설치"></a>zsh 와 oh-my-zsh 설치</h1><h2 id="step-1"><a href="#step-1" class="headerlink" title="step 1"></a>step 1</h2><p><code>mac: brew</code>, <code>linux: apt-get</code></p>
+<ul>
+<li>각 os에 맞춰 zsh를 설치 해줄 패키지관리자를 업데이트 또는 설치 해준다.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+<h2 id="step-2"><a href="#step-2" class="headerlink" title="step 2"></a>step 2</h2><p><code>zsh</code> 최신 버전 설치<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install zsh</span><br></pre></td></tr></table></figure></p>
+<h2 id="step-3"><a href="#step-3" class="headerlink" title="step 3"></a>step 3</h2><p><a href="http://ohmyz.sh" target="_blank" rel="noopener">oh-my-zsh</a> 최신 버전 설치<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>설치 완료 모습<br>아래와 같은 모습을 보여주기 시작한다면 성공!<br><img src="../images/posts/use-zsh/zsh-image1.png" alt="View"></li>
+</ul>
+<h2 id="step-4"><a href="#step-4" class="headerlink" title="step 4"></a>step 4</h2><h3 id="테마-적용하기"><a href="#테마-적용하기" class="headerlink" title="테마 적용하기!"></a>테마 적용하기!</h3><ul>
+<li>사용할 수 있는 테마 리스트는 <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes" target="_blank" rel="noopener">링크</a>에서 확인 할 수있다.</li>
+<li>git 사용자에게 좋은 <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes#agnosterzak" target="_blank" rel="noopener">AgnosterZak</a> 적용</li>
+</ul>
+<h3 id="agnoster-적용-하기"><a href="#agnoster-적용-하기" class="headerlink" title="agnoster 적용 하기"></a>agnoster 적용 하기</h3><p><code>.zshrc</code>의 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```bash</span><br><span class="line">$ vi ~/.zshrc</span><br></pre></td></tr></table></figure></p>
+<p>터미널 재시작 또는 아래와 같이 source 명령을 통해 적용 해준다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure></p>
+<p>적용 되었을 경우, 아래와 같이 폰트가 깨는 현상은 만나 볼 수도 있다.<br><img src="../images/posts/use-zsh/zsh-image2.png" alt="View"></p>
+<p>폰트 깨짐을 해결하기 위해서는 <a href="https://gist.github.com/agnoster/3712874" target="_blank" rel="noopener">Powerline-patched font</a> 설치가 필요 하다<br>설치 방법은 링크를 따라가서 따라하면된다.<br>mac의 경우, 폰트 적용은 설치후 iterm에 아래처럼 <code>Meslo LG M DZ Regular for Powerline</code>을 적용 해주면 된다.<br><img src="../images/posts/use-zsh/zsh-image3.png" alt="View"></p>
+<p>이후, 아래와 같은 문구가 터미널 열때마다 뜬다면<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Last login: Tue Feb 19 08:55:17 on ttys013</span><br><span class="line">[oh-my-zsh] Insecure completion-dependent directories detected:</span><br><span class="line">drwxrwxr-x  7 sham  admin  224 Feb 19 08:17 /usr/<span class="built_in">local</span>/share/zsh</span><br><span class="line">drwxrwxr-x  6 sham  admin  192 Apr 28  2017 /usr/<span class="built_in">local</span>/share/zsh/site-functions</span><br><span class="line"></span><br><span class="line">[oh-my-zsh] For safety, we will not load completions from these directories until</span><br><span class="line">[oh-my-zsh] you fix their permissions and ownership and restart zsh.</span><br><span class="line">[oh-my-zsh] See the above list <span class="keyword">for</span> directories with group or other writability.</span><br><span class="line"></span><br><span class="line">[oh-my-zsh] To fix your permissions you can <span class="keyword">do</span> so by disabling</span><br><span class="line">[oh-my-zsh] the write permission of <span class="string">"group"</span> and <span class="string">"others"</span> and making sure that the</span><br><span class="line">[oh-my-zsh] owner of these directories is either root or your current user.</span><br><span class="line">[oh-my-zsh] The following <span class="built_in">command</span> may <span class="built_in">help</span>:</span><br><span class="line">[oh-my-zsh]     compaudit | xargs chmod g-w,o-w</span><br><span class="line"></span><br><span class="line">[oh-my-zsh] If the above didn<span class="string">'t help or you want to skip the verification of</span></span><br><span class="line"><span class="string">[oh-my-zsh] insecure directories you can set the variable ZSH_DISABLE_COMPFIX to</span></span><br><span class="line"><span class="string">[oh-my-zsh] "true" before oh-my-zsh is sourced in your zshrc file.</span></span><br></pre></td></tr></table></figure></p>
+<p><code>ZSH_DISABLE_COMPFIX</code>를 true값으로 .zshrc에 적용 해주면 된다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_DISABLE_COMPFIX=<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>prompt에서 나오는 hostname/user네임을 없애거나 추가적인 기능을 넣고 싶다면, 아래의 파일을 열어 수정해주면 된다<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.oh-my-zsh/themes/agnoster.zsh-theme</span><br></pre></td></tr></table></figure></p>
+<p>멀티 라인을 추가 하고 싶다면 아래와 같이 수정 <a href="http://totuworld.github.io/2016/04/08/zsh2line/" target="_blank" rel="noopener">링크참고</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Main prompt</span></span><br><span class="line"><span class="function"><span class="title">build_prompt</span></span>() &#123;</span><br><span class="line">  RETVAL=$?</span><br><span class="line">  prompt_status</span><br><span class="line">  prompt_virtualenv</span><br><span class="line">  prompt_context</span><br><span class="line">  prompt_dir</span><br><span class="line">  prompt_git</span><br><span class="line">  prompt_bzr</span><br><span class="line">  prompt_hg</span><br><span class="line">  prompt_newline <span class="comment"># 멀티라인 적용</span></span><br><span class="line">  prompt_end</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 멀티라인 적용, 커버모양 변경</span></span><br><span class="line"><span class="function"><span class="title">prompt_newline</span></span>() &#123;</span><br><span class="line">  <span class="keyword">if</span> [[ -n <span class="variable">$CURRENT_BG</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> -n <span class="string">"%&#123;%k%F&#123;<span class="variable">$CURRENT_BG</span>&#125;%&#125;<span class="variable">$SEGMENT_SEPARATOR</span></span></span><br><span class="line"><span class="string">%(?.%F&#123;<span class="variable">$CURRENT_BG</span>&#125;.%F&#123;red&#125;)❯%f"</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> -n <span class="string">"%&#123;%k%&#125;"</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">echo</span> -n <span class="string">"%&#123;%f%&#125;"</span></span><br><span class="line">  CURRENT_BG=<span class="string">''</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>prompt에 prefix로 붙는 hostname이 맘에 안든다면 아래를 적용하면 된다<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Context: user@hostname (who am I and where am I)</span></span><br><span class="line"><span class="function"><span class="title">prompt_context</span></span>() &#123;</span><br><span class="line">   <span class="keyword">if</span> [[ <span class="string">"<span class="variable">$USER</span>"</span> != <span class="string">"<span class="variable">$DEFAULT_USER</span>"</span> || -n <span class="string">"<span class="variable">$SSH_CLIENT</span>"</span> ]]; <span class="keyword">then</span></span><br><span class="line">     <span class="comment"># prompt_segment black default "%(!.%&#123;%F&#123;yellow&#125;%&#125;.)%n@%m"</span></span><br><span class="line">     prompt_segment black default <span class="string">"%(!.%&#123;%F&#123;yellow&#125;%&#125;.)%n"</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="자동완성-플러그인-zsh-autosuggestions-설치"><a href="#자동완성-플러그인-zsh-autosuggestions-설치" class="headerlink" title="자동완성 플러그인 zsh-autosuggestions 설치"></a>자동완성 플러그인 <a href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank" rel="noopener">zsh-autosuggestions</a> 설치</h1><ol>
+<li><p><code>git clone</code>을 통해 코드를 zsh plugin에 받아온다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions <span class="variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>.zshrc</code>에 아래와 같이 수정 해준다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plugins=( git zsh-autosuggestions )</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>터미널 재시작 또는 <code>source .zshrc</code>를 하면 적용되어 있는 것을 볼 수 있다!</p>
+<h1 id="별거-아니지만-팁"><a href="#별거-아니지만-팁" class="headerlink" title="별거 아니지만 팁"></a>별거 아니지만 팁</h1></li>
+</ol>
+<ul>
+<li>/bin/bash 와 /bin/zsh에 모두 적용하고 싶은 <code>xxxrc</code>가 있다면 .rc_profile과 같은 녀석을 만들어 <code>xxxxrc</code>에서 불러주면 편해진다</li>
+<li>bash와 zsh를 모두 이용할때 좋음</li>
+</ul>
+
+        <div id="react-support-footer-root"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+    
+
+    <!-- js vendors -->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.0/lunr.min.js"></script>
+
+    <!-- js source  -->
+    <script src="/script/doc.js"></script>
+
+    
+
+  </body>
+</html>
